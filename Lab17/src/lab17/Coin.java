@@ -9,6 +9,8 @@ public abstract class Coin extends Money {
       return value;
    }
    public String toString() {
+      if (getValue() < 10) 
+         return "$ 0.0" + getValue();
       return ("$ 0."+getValue());
    }
 }

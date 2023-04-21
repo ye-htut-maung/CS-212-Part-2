@@ -2,13 +2,13 @@ package project2;
 
 /**
  * Sorted RomanNumeral List with add method which will add in order in the list
- * @author yehtu
+ * @author Ye Htut Maung
  *
  */
 public class SortedRomanNumeralList extends RomanNumeralList {
    
    /**
-    * Adding RomanNumeral to sorted linked list
+    * Adding RomanNumeral to sorted linked list (smallest to largest)
     * @param roman RomanNumeral A RomanNumeral to be added in order
     */
    public void add (RomanNumeral roman) {

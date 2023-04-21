@@ -26,13 +26,10 @@ public class Project2 {
       // Filling unsorted list and sorted list
       fillLists(fileName, unsortedList, sortedList);
       // Creating GUI object and initialize a simple layout
-      //RomanNumeralGUI myGUI =
-           new RomanNumeralGUI(unsortedList, sortedList);
       // Showing GUI with 3 columns which are unsorted Roman numeral, unsorted Arabic
       // numbers and sorted Arabic numbers
-    ///  myGUI.printRomanANumeral(unsortedList, sortedList);
+           new RomanNumeralGUI(unsortedList, sortedList);
       
-      System.out.println();
 
    }
 

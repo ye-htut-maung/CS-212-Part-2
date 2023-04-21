@@ -12,10 +12,10 @@ import java.awt.*;
 
 public class RomanNumeralGUI extends JFrame {
    
-   static Container myContentPane;
-   static TextArea myOriginalRoman;
-   static TextArea unsortedNumbers;
-   static TextArea sortedNumbers;
+   private static Container myContentPane;
+   private static TextArea myOriginalRoman;
+   private static TextArea unsortedNumbers;
+   private static TextArea sortedNumbers;
 
    /**
     * Constructor - Creating a User Interface
@@ -52,26 +52,26 @@ public class RomanNumeralGUI extends JFrame {
     * @param sortedList
     */
 
-   public static void printRomanANumeral(UnsortedRomanNumeralList unsortedList, SortedRomanNumeralList sortedList) {
+   private void printRomanANumeral(UnsortedRomanNumeralList unsortedList, SortedRomanNumeralList sortedList) {
       
       
       // pointer node of unsorted list
-      RomanNumeralListNode p = unsortedList.first.next;
+      RomanNumeralListNode unsortedPointer = unsortedList.first.next;
       
       // adding unsorted roman numeral and arabic numbers to GUI
-      while (p != null) {
-         myOriginalRoman.append(p.data.getRomanNumeral() + "\n");
-         unsortedNumbers.append(p.data.getArabicValue() + "\n");
-         p = p.next;
+      while (unsortedPointer != null) {
+         myOriginalRoman.append(unsortedPointer.data.getRomanNumeral() + "\n");
+         unsortedNumbers.append(unsortedPointer.data.getArabicValue() + "\n");
+         unsortedPointer = unsortedPointer.next;
       }
       
       // pointer node of sorted list
-      RomanNumeralListNode p2 = sortedList.first.next;
+      RomanNumeralListNode sortedPointer = sortedList.first.next;
       
       // adding sorted arabic numbers to GUI
-      while (p2 != null) {
-         sortedNumbers.append(p2.data.getArabicValue() + "\n");
-         p2 = p2.next;
+      while (sortedPointer != null) {
+         sortedNumbers.append(sortedPointer.data.getArabicValue() + "\n");
+         sortedPointer = sortedPointer.next;
       }
 
    }
