@@ -65,6 +65,7 @@ public class LinkedList {
 	   node.next = first.next;
 	   first.next = node;
 	   length++;
+	   if(first == last) last = node;
 	   
 
 	} // method append(String)
